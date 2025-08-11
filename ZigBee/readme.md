@@ -40,14 +40,21 @@
 ### SprutHub установленным на WirenBoard
 1. Покдлчитесь к WirenBoard по SSH
 2. Перейдите в директорию /mnt/data/makesimple/.Spruthub/data/Firmwares/ZigBee
-3. Найдите актуальную версию и выполните команду wget https://github.com/ONOKOM/firmware/ZigBee/main/..../gr-1-zb-s_hw1.x_fw0.3.0_ota15.ota (ссылку замените на актуальную)
+3. Найдите актуальную версию и выполните команду 
+   
+    ```
+    wget https://github.com/ONOKOM/firmware/raw/refs/heads/main/ZigBee/main/AUX-1-ZB-S/0.5.0/aux-1-zb-s_hw1.x_fw0.5.0_ota15.ota (ссылку замените на актуальную)
+     ```
 4. Пергрузите SprutHub после перезагрузки начнется этап обновления устройства (занимает примерно 15 минут)
 Оследить как обновляется устроство можно в интерфейсе SprutHub включив отладку
 
 ### SprutHub установленным на Raspberry PI
 1. Покдлчитесь к Raspberry PI по SSH
 2. Перейдите в директорию /home/makesimple/.Spruthub/data/Firmwares/ZigBee
-3. Найдите актуальную версию и выполните команду wget https://github.com/ONOKOM/firmware/ZigBee/main/..../gr-1-zb-s_hw1.x_fw0.3.0_ota15.ota (ссылку замените на актуальную)
+3. Найдите актуальную версию и выполните команду 
+ ```
+wget https://github.com/ONOKOM/firmware/raw/refs/heads/main/ZigBee/main/AUX-1-ZB-S/0.5.0/aux-1-zb-s_hw1.x_fw0.5.0_ota15.ota (ссылку замените на актуальную)
+ ```
 4. Пергрузите SprutHub после перезагрузки начнется этап обновления устройства (занимает примерно 15 минут)
 Отследить как обновляется устроство можно в интерфейсе SprutHub включив отладку
 
@@ -63,7 +70,7 @@
     zigbee_ota_override_index_location: ota/my_index.json
 ```
 
-3. Создать в папке zigbee2mqtt/data/ файл my_index.json. Указать в нём имя файла новой прошивки, например:
+3. Создать в папке zigbee2mqtt/data/ota файл my_index.json. Указать в нём имя файла новой прошивки, например:
 
  ```
  [
